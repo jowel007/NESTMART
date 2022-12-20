@@ -53,9 +53,19 @@ class AdminController extends Controller
 
         $data->save();
 
-        return redirect()->back();
+        $notification = array(
+            'message' => 'Admin Profile Updated Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->back()->with($notification);
 
     }  //end method admin profile store
+
+
+    public function AdminChangePassword(){
+        return view('admin.admin_change_password');
+    } // End Mehtod
 
 
 }

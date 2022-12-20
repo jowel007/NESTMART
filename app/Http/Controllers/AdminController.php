@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Auth;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class AdminController extends Controller
 {
@@ -23,4 +24,11 @@ class AdminController extends Controller
         $request->session()->regenerateToken();
         return redirect('/admin/login');
     }//end method admin logout
+
+
+    public function AdminProfile(){
+        $id = Auth::user()->id;
+        $aminData = User::find($id);
+        return view('admin.admin_profile_view',compact('aminData'));
+    }//end method admin profile
 }

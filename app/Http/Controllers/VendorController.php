@@ -17,6 +17,12 @@ class VendorController extends Controller
         return view('vendor.vendor_login');
     }
 
+    public function VendorProfile(){
+        $id = Auth::user()->id;
+        $vendorData = User::find($id);
+        return view('vendor.vendor_profile_view',compact('vendorData'));
+    }
+
     public function VendorDestroy(Request $request){
         Auth::guard('web')->logout();
 

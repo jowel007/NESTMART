@@ -78,7 +78,7 @@ class VendorController extends Controller
         ]);
         return back()->with("status", " Password Changed Successfully");
 
-    } // End Mehtod 
+    } // End Mehtod
 
     public function VendorDestroy(Request $request){
         Auth::guard('web')->logout();

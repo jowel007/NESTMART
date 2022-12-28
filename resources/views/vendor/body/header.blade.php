@@ -293,13 +293,13 @@
 
                                 @php
                                     $id = Auth::user()->id;
-                                    $adminData = App\Models\User::find($id);
+                                    $vendorData = App\Models\User::find($id);
                                 @endphp
 
                                 <a class="dropdown-item" href="javascript:;">
                                     <div class="d-flex align-items-center">
                                         <div class="user-online">
-                                            <img src="{{ (!empty($adminData->photo)) ? url('upload/admin_images/'.$adminData->photo):url('upload/no_image.jpg') }}" class="user-img" alt="user avatar">
+                                            <img src="{{ (!empty($vendorData->photo)) ? url('upload/vendor_images/'.$vendorData->photo):url('upload/no_image.jpg') }}" class="user-img" alt="user avatar">
                                         </div>
                                         <div class="flex-grow-1">
                                             <h6 class="msg-name">Thomas Wheeler <span class="msg-time float-end">2 days
@@ -339,7 +339,7 @@
                 <ul class="dropdown-menu dropdown-menu-end">
                     <li><a class="dropdown-item" href="{{ route('vendor.profile') }}"><i class="bx bx-user"></i><span>Profile</span></a>
                     </li>
-                    <li><a class="dropdown-item" href="{{ route('admin.change.password') }}"><i class="bx bx-cog"></i><span>Change Password</span></a>
+                    <li><a class="dropdown-item" href="{{ route('vendor.change.password') }}"><i class="bx bx-cog"></i><span>Change Password</span></a>
                     </li>
                     <li><a class="dropdown-item" href="javascript:;"><i class='bx bx-home-circle'></i><span>Dashboard</span></a>
                     </li>

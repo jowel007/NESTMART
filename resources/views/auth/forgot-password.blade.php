@@ -36,9 +36,9 @@
                                 <label class="form-label">Email ID</label>
                                 <input type="text" class="form-control form-control-lg" id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
                             </div>
-                        
+
                             <div class="d-grid gap-2">
-                                <button type="button" class="btn btn-primary btn-lg">Send</button> 
+                                <button type="button" class="btn btn-primary btn-lg">Send</button>
                                 <a href="/admin/login" class="btn btn-light btn-lg">
                                     <i class='bx bx-arrow-back me-1'></i>Back to Login</a>
                             </div>

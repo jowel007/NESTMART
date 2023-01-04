@@ -43,4 +43,16 @@ class UserController extends Controller
         return redirect()->back()->with($notification);
 
     }
+
+    // user logout
+
+    public function UserLogout(Request $request){
+        Auth::guard('web')->logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('/login');
+    }
 }

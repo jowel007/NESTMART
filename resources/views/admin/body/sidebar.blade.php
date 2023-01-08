@@ -27,7 +27,7 @@
                 <div class="menu-title">Brand</div>
             </a>
             <ul>
-                <li> <a href="index.html"><i class="bx bx-right-arrow-alt"></i>Default</a>
+                <li> <a href="{{route('all.brand')}}"><i class="bx bx-right-arrow-alt"></i>All Brand</a>
                 </li>
                 <li> <a href="dashboard-eCommerce.html"><i class="bx bx-right-arrow-alt"></i>eCommerce</a>
                 </li>
@@ -63,7 +63,7 @@
             </ul>
         </li>
         <li class="menu-label">UI Elements</li>
-        
+
         <li>
             <a href="javascript:;" class="has-arrow">
                 <div class="parent-icon"><i class='bx bx-cart'></i>
@@ -154,11 +154,11 @@
                 </li>
             </ul>
         </li>
-        
-        
-        
+
+
+
         <li class="menu-label">Charts & Maps</li>
-        
+
         <li>
             <a class="has-arrow" href="javascript:;">
                 <div class="parent-icon"><i class="bx bx-line-chart"></i>
@@ -174,9 +174,9 @@
                 </li>
             </ul>
         </li>
-        
-        
-        
+
+
+
         <li>
             <a href="https://themeforest.net/user/codervent" target="_blank">
                 <div class="parent-icon"><i class="bx bx-support"></i>

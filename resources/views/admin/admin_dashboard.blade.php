@@ -24,6 +24,10 @@
 	<link rel="stylesheet" href="{{ asset('adminbackend') }}/assets/css/semi-dark.css" />
 	<link rel="stylesheet" href="{{ asset('adminbackend') }}/assets/css/header-colors.css" />
 
+    <!-- DataTable -->
+    <link href="{{ asset('adminbackend/assets/plugins/datatable/css/dataTables.bootstrap5.min.css') }}" rel="stylesheet" />
+    <!-- DataTable-->
+
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
 
 	<title>Rukada - Responsive Bootstrap 5 Admin Template</title>
@@ -41,18 +45,18 @@
 		<!--end header -->
 
 
-        
+
 		<!--start page wrapper -->
 		<div class="page-wrapper">
 			@yield('admin')
 		</div>
 		<!--end page wrapper -->
-																																												
+
 
 		<!--start overlay-->
 		<div class="overlay toggle-icon"></div>
 		<!--end overlay-->
-        
+
 		<!--Start Back To Top Button--> <a href="javaScript:;" class="back-to-top"><i class='bx bxs-up-arrow-alt'></i></a>
 		<!--End Back To Top Button-->
 		@include('admin.body.footer')
@@ -179,6 +183,15 @@
 		  });
 	  </script>
 	  <script src="{{ asset('adminbackend') }}/assets/js/index.js"></script>
+
+    <!--Datatable-->
+    <script src="{{ asset('adminbackend/assets/plugins/datatable/js/jquery.dataTables.min.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable();
+        } );
+    </script>
+    <!--Datatable-->
 	<!--app JS-->
 	<script src="{{ asset('adminbackend') }}/assets/js/app.js"></script>
 
@@ -199,11 +212,11 @@
 		   break;
 		   case 'error':
 		   toastr.error(" {{ Session::get('message') }} ");
-		   break; 
+		   break;
 		}
-		@endif 
+		@endif
 	   </script>
-	
+
 
 </body>
 

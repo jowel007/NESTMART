@@ -92,20 +92,20 @@ class CategoryController extends Controller
 
     }
 
-//    public function DeleteCategory($id){
-//        $category = Category::findOrFail($id);
-//        $img = $category ->category_image;
-//        unlink($img );
-//
-//        Category::findOrFail($id)->delete();
-//
-//        $notification = array(
-//            'message' => 'Category Deleted Successfully',
-//            'alert-type' => 'warning'
-//        );
-//
-//        return redirect()->back()->with($notification);
-//
-//    } //end method
+    public function DeleteCategory($id){
+        $category = Category::findOrFail($id);
+        $img = $category ->category_image;
+        unlink($img );
+
+        Category::findOrFail($id)->delete();
+
+        $notification = array(
+            'message' => 'Category Deleted Successfully',
+            'alert-type' => 'warning'
+        );
+
+        return redirect()->back()->with($notification);
+
+    } //end method
 
 }

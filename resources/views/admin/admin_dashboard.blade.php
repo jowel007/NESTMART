@@ -183,7 +183,7 @@
 		  });
 	  </script>
 	  <script src="{{ asset('adminbackend') }}/assets/js/index.js"></script>
-
+      <script src="{{ asset('adminbackend') }}/assets/js/validate.min.js"></script>
     <!--Datatable-->
     <script src="{{ asset('adminbackend/assets/plugins/datatable/js/jquery.dataTables.min.js') }}"></script>
     <script>
@@ -194,6 +194,7 @@
     <!--Datatable-->
 	<!--app JS-->
 	<script src="{{ asset('adminbackend') }}/assets/js/app.js"></script>
+
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 

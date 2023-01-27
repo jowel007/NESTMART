@@ -3,7 +3,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-
     <div class="page-content">
         <!--breadcrumb-->
         <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
@@ -30,18 +29,19 @@
                         <div class="card">
                             <div class="card-body">
 
-                                <form id="myForm" method="post" action="{{ route('store.category') }}" enctype="multipart/form-data" >
+                                <form id="myForm" method="post" action="{{ route('update.category') }}" enctype="multipart/form-data" >
                                     @csrf
 
                                     <input type="hidden" name="id" value="{{ $category->id }}">
                                     <input type="hidden" name="old_image" value="{{ $category->category_image }}">
+
 
                                     <div class="row mb-3">
                                         <div class="col-sm-3">
                                             <h6 class="mb-0">Category Name</h6>
                                         </div>
                                         <div class="form-group col-sm-9 text-secondary">
-                                            <input type="text" name="category_name" value="{{ $category->category_name }}" class="form-control"   />
+                                            <input type="text" name="category_name" class="form-control" value="{{ $category->category_name }}"   />
                                         </div>
                                     </div>
 
@@ -62,7 +62,7 @@
                                             <h6 class="mb-0"> </h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
-                                            <img id="showImage" src="{{ asset($category->category_image) }}" alt="Admin" style="width:100px; height: 100px;"  >
+                                            <img id="showImage" src="{{ asset($category->category_image)   }}" alt="Admin" style="width:100px; height: 100px;"  >
                                         </div>
                                     </div>
 
@@ -95,7 +95,6 @@
 
 
 
-    {{--    validation --}}
 
     <script type="text/javascript">
         $(document).ready(function (){
@@ -127,6 +126,8 @@
     </script>
 
 
+
+
     <script type="text/javascript">
         $(document).ready(function(){
             $('#image').change(function(e){
@@ -138,10 +139,6 @@
             });
         });
     </script>
-
-
-
-
 
 
 

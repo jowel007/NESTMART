@@ -88,4 +88,8 @@ class VendorController extends Controller
         $request->session()->regenerateToken();
         return redirect('/vendor/login');
     }
+
+    public function BecomeVendor(){
+        return view('auth.become_vendor');
+    } //end method
 }

@@ -69,7 +69,10 @@ Route::middleware(['auth','role:vendor'])->group(function(){
 });
 
 Route::get('/admin/login', [AdminController::class, 'AdminLogin']);
-Route::get('/vendor/login', [VendorController::class, 'VendorLogin']);
+Route::get('/vendor/login', [VendorController::class, 'VendorLogin'])->name('vendor.login');
+
+Route::get('/become/vendor', [VendorController::class,'BecomeVendor'])->name('become.vendor');
+
 
 Route::middleware(['auth','role:admin'])->group(function (){
     // Brand All Route
@@ -101,6 +104,8 @@ Route::middleware(['auth','role:admin'])->group(function (){
         Route::post('/update/subcategory' , 'UpdateSubCategory')->name('update.subcategory');
         Route::get('/delete/subcategory/{id}' , 'DeleteSubCategory')->name('delete.subcategory');
     });
+
+
 
 
 

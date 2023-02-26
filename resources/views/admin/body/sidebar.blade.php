@@ -76,7 +76,7 @@
                 <li> <a href="{{ route('inactive.vendor') }}"><i class="bx bx-right-arrow-alt"></i>InActive Vendor</a>
                 </li>
 
-                <li> <a href="route('')"><i class="bx bx-right-arrow-alt"></i>Active Vendor</a>
+                <li> <a href="{{ route('active.vendor') }}"><i class="bx bx-right-arrow-alt"></i>Active Vendor</a>
                 </li>
 
             </ul>

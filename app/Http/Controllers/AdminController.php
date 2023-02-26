@@ -69,10 +69,10 @@ class AdminController extends Controller
     } // End Mehtod
 
     public function AdminUpdatePassword(Request $request){
-        // Validation 
+        // Validation
         $request->validate([
             'old_password' => 'required',
-            'new_password' => 'required|confirmed', 
+            'new_password' => 'required|confirmed',
         ]);
 
         // Match The Old Password
@@ -80,14 +80,20 @@ class AdminController extends Controller
             return back()->with("error", "Old Password Doesn't Match!!");
         }
 
-        // Update The new password 
+        // Update The new password
         User::whereId(auth()->user()->id)->update([
             'password' => Hash::make($request->new_password)
 
         ]);
         return back()->with("status", " Password Changed Successfully");
 
-    } // End Mehtod 
+    } // End Mehtod
+
+
+    public function InactiveVendor(){
+        $inActiveVendor = User::where('status','inactive')->where('role','vendor')->latest()->get();
+        return view('backend.vendor.inactive_vendor',compact('inActiveVendor'));
+    } // End Mehtod
 
 
 }

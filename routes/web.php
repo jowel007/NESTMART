@@ -119,11 +119,8 @@ Route::middleware(['auth','role:admin'])->group(function (){
     // Product All Route
     Route::controller(ProductController::class)->group(function(){
         Route::get('/all/product' , 'AllProduct')->name('all.product');
-        Route::get('/add/category' , 'AddCategory')->name('add.category');
-        Route::post('/store/category' , 'StoreCategory')->name('store.category');
-        Route::get('/edit/category/{id}' , 'EditCategory')->name('edit.category');
-        Route::post('/update/category' , 'UpdateCategory')->name('update.category');
-        Route::get('/delete/category/{id}' , 'DeleteCategory')->name('delete.category');
+        Route::get('/add/product' , 'AddProduct')->name('add.product');
+
     });
 
 

@@ -104,6 +104,9 @@ Route::middleware(['auth','role:admin'])->group(function (){
         Route::get('/edit/subcategory/{id}' , 'EditSubCategory')->name('edit.subcategory');
         Route::post('/update/subcategory' , 'UpdateSubCategory')->name('update.subcategory');
         Route::get('/delete/subcategory/{id}' , 'DeleteSubCategory')->name('delete.subcategory');
+
+        //ajax subcategory show under category
+        Route::get('/subcategory/ajax/{category_id}' , 'GetSubCategory');
     });
 
     // Vendor Active and Inactive All Route

@@ -88,12 +88,13 @@ class ProductController extends Controller
     }
 
     public function EditProduct($id){
+        $multiImgs = MultiImg::where('product_id',$id)->get();
         $activeVendor = User::where('status','active')->where('role','vendor')->latest()->get();
         $brands = Brand::latest()->get();
         $categories = Category::latest()->get();
         $subcategory = SubCategory::latest()->get();
         $products = Product::findOrFail($id);
-        return view('backend.product.edit_product',compact('products','brands','categories','subcategory','activeVendor'));
+        return view('backend.product.edit_product',compact('products','brands','categories','subcategory','activeVendor','multiImgs'));
     }
 
     public function UpdateProduct(Request $request){
@@ -169,7 +170,7 @@ class ProductController extends Controller
         return redirect()->back()->with($notification);
 
 
-    }// End Method 
+    }// End Method
 
 
 

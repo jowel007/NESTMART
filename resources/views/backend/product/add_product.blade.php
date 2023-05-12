@@ -87,7 +87,7 @@
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="inputCompareatprice" class="form-label">Discount Price</label>
-                                        <input type="text" class="form-control" id="inputCompareatprice" placeholder="00.00">
+                                        <input type="text" class="form-control" name="discount_price" id="inputCompareatprice" placeholder="00.00">
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="inputCostPerPrice" class="form-label">Product Code</label>

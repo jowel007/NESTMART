@@ -27,7 +27,7 @@
                 <hr/>
 
 
-                <form id="myForm" method="post" action="{{ route('store.category') }}" enctype="multipart/form-data" >
+                <form id="myForm" method="post" action="{{ route('store.product') }}" enctype="multipart/form-data" >
                     @csrf
 
                 <div class="form-body mt-4">
@@ -121,7 +121,7 @@
                                         <label for="inputCollection" class="form-label">Product SubCategory</label>
                                         <select name="subcategory_id" class="form-select" id="inputCollection">
                                             <option></option>
-                                            
+
                                         </select>
                                     </div>
 
@@ -132,7 +132,7 @@
                                             @foreach ($activeVendor as $vendor)
                                                 <option value="{{ $vendor->id }}">{{ $vendor->name }}</option>
                                             @endforeach
-                                            
+
                                         </select>
                                     </div>
 
@@ -237,7 +237,7 @@
 {{-- subcategory --}}
 
 <script type="text/javascript">
-  		
+
     $(document).ready(function(){
         $('select[name="category_id"]').on('change', function(){
             var category_id = $(this).val();
@@ -273,31 +273,31 @@
                 },
                 short_descp: {
                     required : true,
-                }, 
+                },
                  product_thambnail: {
                     required : true,
-                }, 
+                },
                  multi_img: {
                     required : true,
-                }, 
+                },
                  selling_price: {
                     required : true,
-                },                   
+                },
                  product_code: {
                     required : true,
-                }, 
+                },
                  product_qty: {
                     required : true,
-                }, 
+                },
                  brand_id: {
                     required : true,
-                }, 
+                },
                  category_id: {
                     required : true,
-                }, 
+                },
                  subcategory_id: {
                     required : true,
-                }, 
+                },
             },
             messages :{
                 product_name: {
@@ -314,7 +314,7 @@
                 },
                 selling_price: {
                     required : 'Please Enter Selling Price',
-                }, 
+                },
                 product_code: {
                     required : 'Please Enter Product Code',
                 },
@@ -322,7 +322,7 @@
                     required : 'Please Enter Product Quantity',
                 },
             },
-            errorElement : 'span', 
+            errorElement : 'span',
             errorPlacement: function (error,element) {
                 error.addClass('invalid-feedback');
                 element.closest('.form-group').append(error);

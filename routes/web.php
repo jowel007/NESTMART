@@ -69,11 +69,15 @@ Route::middleware(['auth','role:vendor'])->group(function(){
     Route::get('/vendor/change/password', [VendorController::class, 'VendorChangePassword'])->name('vendor.change.password');
     Route::post('/vendor/update/password', [VendorController::class, 'VendorUpdatePassword'])->name('vendor.update.password');
 
-    //vendor add product 
+    //vendor add product
     Route::controller(VendorProductController::class)->group(function(){
         Route::get('/vendor/all/product' , 'VendorAllProduct')->name('vendor.all.product');
-        
-    });
+        Route::get('/vendor/add/product' , 'VendorAddProduct')->name('vendor.add.product');
+
+        //ajax subcategory show under category
+        Route::get('/vendor/subcategory/ajax/{category_id}' , 'VendorGetSubCategory');
+
+    }); //group middleware
 
 
 });

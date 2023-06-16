@@ -16,8 +16,7 @@
             </div>
             <div class="ms-auto">
                 <div class="btn-group">
-                    <button type="button" class="btn btn-info"><a href="{{route('add.product')}}">Add Category</button>
-
+                    <button type="button" class="btn btn-info"><a href="{{route('vendor.add.product')}}">Add Product</button>
                 </div>
             </div>
         </div>

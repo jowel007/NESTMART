@@ -96,6 +96,7 @@ class VendorController extends Controller
         return view('auth.become_vendor');
     } //end method
 
+    
     public function VendorRegister(Request $request)
     {
         $request->validate([
@@ -122,7 +123,6 @@ class VendorController extends Controller
 
         return redirect()->route('vendor.login')->with($notification);
 
-
-
-    }//end method
+    }
+    //end method
 }

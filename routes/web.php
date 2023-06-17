@@ -80,6 +80,10 @@ Route::middleware(['auth','role:vendor'])->group(function(){
         Route::post('/vendor/update/product/multiimage' , 'VendorUpdateProductmultiImage')->name('vendor.update.product.multiimage');
         Route::get('/vendor/product/multiimg/delete/{id}' , 'VendorMultiimgDelete')->name('vendor.product.multiimg.delete');
 
+        Route::get('/vendor/product/inactive/{id}' , 'VendorProductInactive')->name('vendor.product.inactive');
+        Route::get('/vendor/product/active/{id}' , 'VendorProductActive')->name('vendor.product.active');
+        Route::get('/vendor/delete/product/{id}' , 'VendorProductDelete')->name('vendor.delete.product');
+
         //ajax subcategory show under category
         Route::get('/vendor/subcategory/ajax/{category_id}' , 'VendorGetSubCategory');
 

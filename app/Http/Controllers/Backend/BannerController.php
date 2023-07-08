@@ -89,8 +89,26 @@ class BannerController extends Controller
         return redirect()->route('all.banner')->with($notification); 
 
         } // end else
-        
+
     }
+
+
+    public function DeleteBanner($id){
+        $banner = Banner::findOrFail($id);
+        $img = $banner->banner_image;
+        unlink($img ); 
+
+        Banner::findOrFail($id)->delete();
+
+        $notification = array(
+            'message' => 'Banner Deleted Successfully',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->back()->with($notification); 
+
+    }// End Method 
+    
 
 
 

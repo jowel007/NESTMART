@@ -10,6 +10,7 @@ use App\Http\Controllers\Backend\BrandController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\SubCategoryController;
 use App\Http\Controllers\Backend\ProductController;
+use App\Http\Controllers\Backend\SliderController;
 use App\Http\Middleware\RedirectIfAuthenticated;
 use App\Http\Controllers\Backend\VendorProductController;
 /*
@@ -159,6 +160,17 @@ Route::middleware(['auth','role:admin'])->group(function (){
         Route::get('/product/active/{id}' , 'ProductActive')->name('product.active');
 
         Route::get('/delete/product/{id}' , 'DeleteProduct')->name('delete.product');
+ 
+    });
+
+// Slider All Route
+    Route::controller(SliderController::class)->group(function(){
+        Route::get('/all/slider' , 'AllSlider')->name('all.slider');
+        Route::get('/add/slider' , 'AddSlider')->name('add.slider');
+        Route::post('/store/slider' , 'StoreSlider')->name('store.slider');
+        Route::get('/edit/category/{id}' , 'EditCategory')->name('edit.category');
+        Route::post('/update/category' , 'UpdateCategory')->name('update.category');
+        Route::get('/delete/category/{id}' , 'DeleteCategory')->name('delete.category');
     });
 
 

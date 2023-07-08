@@ -16,7 +16,7 @@
             </div>
             <div class="ms-auto">
                 <div class="btn-group">
-                    <button type="button" class="btn btn-info"><a href="{{route('add.slider')}}">Add Banner</button>
+                    <button type="button" class="btn btn-info"><a href="{{route('add.banner')}}">Add Banner</button>
                 </div>
             </div>
         </div>
